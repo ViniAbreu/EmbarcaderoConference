@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Cadastro de Clientes</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/clientes/<% _.cli_codigo %>" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="cli_codigo">Código</label>
+                    <input class="form-control form-control-sm" id="cli_codigo" name="cli_codigo" value="<% _.cli_codigo %>" readonly>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="fantasia">Fantasia</label>
+                    <input class="form-control form-control-sm" id="fantasia" name="cli_fantasia" value="<% _.cli_fantasia %>">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="razaosocial">Razão Social</label>
+                    <input class="form-control form-control-sm" id="razaosocial" name="cli_razao_social" value="<% _.cli_razao_social %>">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="cnpj">CNPJ</label>
+                    <input class="form-control form-control-sm" id="cnpj" name="cli_cnpj" value="<% _.cli_cnpj %>">
+                </div>
+            </div>
+            <div class="text-right">
+                <a class="btn btn-danger mr-2" href="/clientes">Descartar Alterações</a>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
